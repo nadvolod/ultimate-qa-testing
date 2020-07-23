@@ -1,0 +1,29 @@
+{
+  "name": "ultimate-qa-testing",
+  "version": "1.0.0",
+  "description": "A repo to do production testing of UltimateQA.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadvolod/ultimate-qa-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadvolod/ultimate-qa-testing/issues"
+  },
+  "homepage": "https://github.com/nadvolod/ultimate-qa-testing#readme",
+  "devDependencies": {
+    "@wdio/cli": "^6.3.4",
+    "@wdio/local-runner": "^6.3.4",
+    "@wdio/mocha-framework": "^6.3.0",
+    "@wdio/spec-reporter": "^6.3.0",
+    "@wdio/sync": "^6.3.3",
+    "chromedriver": "^84.0.0",
+    "wdio-chromedriver-service": "^6.0.3"
+  }
+}
