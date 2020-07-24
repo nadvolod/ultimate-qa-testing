@@ -22,5 +22,22 @@ module.exports = {
           .snapshot('Loaded')
           .end()
     }
+  ],
+  resolutions: [
+    {
+      deviceName: 'iPhone X'
+    },
+    {
+      deviceName: 'iPhone 8'
+    },
+    {
+      deviceName: 'iPhone 8 Plus'
+    },
+    {
+      deviceName: 'Nexus 10'
+    },
+    {
+      deviceName: 'Galaxy S8'
+    },
   ]
 };
