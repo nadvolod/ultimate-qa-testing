@@ -37,3 +37,4 @@ jobs:
       run: |
         npm install -g speedo
         speedo run www.ultimateqa.com?utm_source=automated-testing
+        speedo run https://ultimateqa.com/selenium-webdriver-java-course/?utm_source=automated-testing
