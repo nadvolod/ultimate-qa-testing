@@ -30,6 +30,7 @@ jobs:
       env:
         SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
       run: npm run test-screener
+      continue-on-error: true
     - name: Run front-end performance
       env:
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
