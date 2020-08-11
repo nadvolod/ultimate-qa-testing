@@ -31,11 +31,24 @@ jobs:
         SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
       run: npm run test-screener
       continue-on-error: true
-    - name: Run front-end performance
+    - name: Performance test landing page
       env:
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
       run: |
         npm install -g speedo
         speedo run www.ultimateqa.com?utm_source=automated-testing
-        speedo run https://ultimateqa.com/selenium-webdriver-java-course/?utm_source=automated-testing
+    - name: Performance test Selenium Java course landing page
+      env:
+        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+      run: |
+        npm install -g speedo
+        speedo run https://ultimateqa.com/selenium-webdriver-java-course?utm_source=automated-testing
+    - name: Performance test Selenium Java Sale landing page
+      env:
+        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
+      run: |
+        npm install -g speedo
+        speedo run https://ultimateqa.com/selenium-java-sale?utm_source=automated-testing 
