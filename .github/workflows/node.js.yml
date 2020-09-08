@@ -26,6 +26,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+    - name: Run front end performance for Home Page
+      run: |
+        npm install -g sitespeed.io
+        sitespeed.io www.ultimateqa.com?utm_source=automated-testing
     - name: Run visual tests
       env:
         SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
