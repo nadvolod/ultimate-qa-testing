@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-screener": "screener-runner --conf screener.config.js"
+    "test-screener": "screener-runner --conf screener.config.js",
+    "test-lander": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +20,14 @@
   },
   "homepage": "https://github.com/nadvolod/ultimate-qa-testing#readme",
   "devDependencies": {
-    "@wdio/cli": "^6.3.4",
-    "@wdio/local-runner": "^6.3.4",
-    "@wdio/mocha-framework": "^6.3.0",
-    "@wdio/spec-reporter": "^6.3.0",
-    "@wdio/sync": "^6.3.3",
-    "chromedriver": "^84.0.0",
+    "@wdio/cli": "^6.5.0",
+    "@wdio/local-runner": "^6.5.0",
+    "@wdio/mocha-framework": "^6.5.0",
+    "@wdio/sauce-service": "^6.5.0",
+    "@wdio/spec-reporter": "^6.4.7",
+    "@wdio/sync": "^6.5.0",
+    "chromedriver": "^84.0.1",
     "screener-runner": "^0.11.5",
-    "wdio-chromedriver-service": "^6.0.3"
+    "wdio-chromedriver-service": "^6.0.4"
   }
 }
