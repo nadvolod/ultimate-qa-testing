@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-screener": "screener-runner --conf screener.config.js",
-    "test-lander": "wdio wdio.conf.js"
+    "test-lander": "wdio wdio.saucelabs.conf.js"
   },
   "repository": {
     "type": "git",
