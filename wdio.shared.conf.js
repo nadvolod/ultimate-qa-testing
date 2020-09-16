@@ -9,7 +9,7 @@ exports.config = {
     services: [],
     logLevel: 'info',
     bail: 0,
-    baseUrl: 'https://test-ultimateqa.wpmudev.host/',
+    baseUrl: 'https://www.ultimateqa.com/',
     waitforTimeout: 10000,
     connectionRetryTimeout: 20000,
     connectionRetryCount: 2,
