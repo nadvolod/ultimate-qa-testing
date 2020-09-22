@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-screener": "screener-runner --conf screener.config.js",
-    "test-lander": "wdio wdio.saucelabs.conf.js"
+    "test-lander": "wdio wdio.saucelabs.conf.js",
+    "test-course-urls": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,9 @@
     "@wdio/sauce-service": "^6.5.0",
     "@wdio/spec-reporter": "^6.4.7",
     "@wdio/sync": "^6.5.0",
+    "axios": "^0.20.0",
     "chromedriver": "^84.0.1",
+    "jest": "^26.4.2",
     "screener-runner": "^0.11.5",
     "wdio-chromedriver-service": "^6.0.4"
   }
