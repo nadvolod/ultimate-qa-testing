@@ -26,17 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - name: Test Selenium Java landing page
-      env:
-        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-        SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
-      run: |
-        npm run test-lander
-#    - name: Run visual tests
-#      env:
-#        SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
-#      run: npm run test-screener
-#      continue-on-error: true
+
     - name: Performance test home page
       continue-on-error: true
       env:
@@ -45,20 +35,12 @@ jobs:
       run: |
         npm install -g speedo
         speedo run www.ultimateqa.com?utm_source=automated-testing
-      
-    - name: Performance test Selenium Java course landing page
+
+    - name: Performance test Selenium Java landing page v2.0
       continue-on-error: true
       env:
         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
         SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
       run: |
         npm install -g speedo
-        speedo run https://ultimateqa.com/selenium-webdriver-java-course?utm_source=automated-testing
-    - name: Performance test Selenium Java Sale landing page
-      continue-on-error: true
-      env:
-        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-        SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}}
-      run: |
-        npm install -g speedo
-        speedo run https://ultimateqa.com/selenium-java-sale?utm_source=automated-testing
+        speedo run https://ultimateqa.com/selenium-java-2/?utm_source=automated-testing
