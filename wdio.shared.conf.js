@@ -7,7 +7,7 @@ exports.config = {
     ],
     maxInstances: 100,
     services: [],
-    logLevel: 'info',
+    logLevel: 'error',
     bail: 0,
     baseUrl: 'https://www.ultimateqa.com/',
     waitforTimeout: 10000,
