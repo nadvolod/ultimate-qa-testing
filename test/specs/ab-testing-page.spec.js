@@ -1,37 +1,42 @@
 const {Helpers} = require('../helpers');
 
+
 describe('AB testing landing page', () => {
     it('has 2 AB testing variations', () => {
-        let abTestingUrl = 'selenium-java-ab-testing';
-        let isButton1Found = false;
-        let isButton2Found = false;
-
-        browser.url(abTestingUrl)
-        isButton1Found = Helpers.findButton1(isButton1Found);
-        isButton2Found = Helpers.findButton2(isButton2Found);
-        console.log('isButton1Found,isButton2Found',isButton1Found,isButton2Found)
+        let timesButtonOneFound = 0;
+        let timesButtonTwoFound = 0;
+        // First
+        Helpers.loadUrl();
+        // The `+=` counts the new value to the previous one
+        // Helpers.findButton1() returns a boolean, with a `+` in front of it you turn it into a number true => 1, false => 0
+        timesButtonOneFound += +Helpers.findButton1();
+        timesButtonTwoFound += +Helpers.findButton2();
+        console.log(`timesButtonOneFound = ${timesButtonOneFound}, timesButtonTwoFound = ${timesButtonTwoFound}`)
+        console.log('\n\n', $('.et_pb_button_module_wrapper').getHTML(), '\n\n')
         browser.deleteAllCookies();
-
-        browser.url(abTestingUrl)
-        isButton1Found = Helpers.findButton1(isButton1Found);
-        isButton2Found = Helpers.findButton2(isButton2Found);
-        console.log('isButton1Found,isButton2Found',isButton1Found,isButton2Found)
+        // Second
+        Helpers.loadUrl();
+        timesButtonOneFound += +Helpers.findButton1();
+        timesButtonTwoFound += +Helpers.findButton2();
+        console.log(`timesButtonOneFound = ${timesButtonOneFound}, timesButtonTwoFound = ${timesButtonTwoFound}`)
+        console.log('\n\n', $('.et_pb_button_module_wrapper').getHTML(), '\n\n')
         browser.deleteAllCookies();
-
-        browser.url(abTestingUrl)
-        isButton1Found = Helpers.findButton1(isButton1Found);
-        isButton2Found = Helpers.findButton2(isButton2Found);
-        console.log('isButton1Found,isButton2Found',isButton1Found,isButton2Found)
+        // Third
+        Helpers.loadUrl();
+        timesButtonOneFound += +Helpers.findButton1();
+        timesButtonTwoFound += +Helpers.findButton2();
+        console.log(`timesButtonOneFound = ${timesButtonOneFound}, timesButtonTwoFound = ${timesButtonTwoFound}`)
+        console.log('\n\n', $('.et_pb_button_module_wrapper').getHTML(), '\n\n')
         browser.deleteAllCookies();
-
-        browser.url(abTestingUrl)
-        isButton1Found = Helpers.findButton1(isButton1Found);
-        isButton2Found = Helpers.findButton2(isButton2Found);
-        console.log('isButton1Found,isButton2Found',isButton1Found,isButton2Found)
+        // Fourth
+        Helpers.loadUrl();
+        timesButtonOneFound += +Helpers.findButton1();
+        timesButtonTwoFound += +Helpers.findButton2();
+        console.log(`timesButtonOneFound = ${timesButtonOneFound}, timesButtonTwoFound = ${timesButtonTwoFound}`)
+        console.log('\n\n', $('.et_pb_button_module_wrapper').getHTML(), '\n\n')
         browser.deleteAllCookies();
-
-        expect(isButton1Found).toBeTruthy();
-        expect(isButton2Found).toBeTruthy();
+        expect(timesButtonOneFound).toBe(2, 'timesButtonOneFound not found as expected');
+        expect(timesButtonTwoFound).toBe(2, 'timesButtonTwoFound not found as expected');
     });
 });
 
