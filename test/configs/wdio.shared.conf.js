@@ -10,13 +10,12 @@ exports.config = {
     logLevel: 'error',
     bail: 0,
     baseUrl: 'https://www.ultimateqa.com/',
-    waitforTimeout: 10000,
-    connectionRetryTimeout: 20000,
+    waitforTimeout: 20000,
+    connectionRetryTimeout: 30000,
     connectionRetryCount: 2,
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000
+        timeout: 120000
     },
 }

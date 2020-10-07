@@ -7,10 +7,10 @@ exports.config = {
         './test/specs/**/*visual.spec.js'
     ],
     maxInstances: 100,
-    logLevel: 'error',
+    logLevel: 'info',
     bail: 0,
     baseUrl: 'https://www.ultimateqa.com/',
-    waitforTimeout: 10000,
+    waitforTimeout: 20000,
     connectionRetryTimeout: 30000,
     connectionRetryCount: 1,
     reporters: ['spec'],
