@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-lander": "wdio test/configs/wdio.saucelabs.conf.js",
-    "test-course-urls": "jest"
+    "test-course-urls": "jest",
+    "test:visual": "wdio test/configs/wdio.visual.conf.js"
   },
   "repository": {
     "type": "git",
