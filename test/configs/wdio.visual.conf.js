@@ -5,7 +5,7 @@ const sauceOptions = {
 };
 const visualOptions = {
     apiKey: process.env.SCREENER_API_KEY,
-    projectName: 'ultimate-qa-testing',
+    projectName: 'UltimateQA Visual',
     scrollAndStitchScreenshots: true
 };
 
