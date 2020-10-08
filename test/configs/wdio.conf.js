@@ -3,9 +3,7 @@ exports.config = {
     // More information about the configuration is found here https://webdriver.io/docs/configurationfile.html
     // ====================
     runner: 'local',
-    specs: [
-        './test/specs/**/*visual.spec.js'
-    ],
+    specs: [],
     maxInstances: 100,
     logLevel: 'info',
     bail: 0,
@@ -15,9 +13,4 @@ exports.config = {
     connectionRetryCount: 1,
     reporters: ['spec'],
     services: [],
-    //Screener Configuration
-    hostname: 'hub.screener.io',
-    port: 443,
-    protocol: 'https',
-    path: '/wd/hub'
 };
