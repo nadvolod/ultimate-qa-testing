@@ -1,6 +1,6 @@
 describe('Visual testing of landing pages', () => {
     it('looks good responsive', () => {
-        browser.url('/');
+        browser.url('/?utm_source=automated-testing');
         browser.execute('/*@visual.init*/', 'Responsive Test');
         browser.execute('/*@visual.snapshot*/', 'Home Page');
 
