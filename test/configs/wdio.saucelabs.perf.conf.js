@@ -16,6 +16,7 @@ config.connectionRetryCount = 1,
 config.specs = [
     './test/specs/**/*perf.spec.js'
 ],
+config.services = config.services.concat('sauce');
 
 config.capabilities = [
     {
@@ -26,6 +27,5 @@ config.capabilities = [
     },
 ];
 
-config.services = config.services.concat('sauce');
 
 exports.config = config;
