@@ -11,7 +11,7 @@ exports.config = {
     bail: 0,
     baseUrl: 'https://www.ultimateqa.com/',
     waitforTimeout: 20000,
-    connectionRetryTimeout: 30000,
+    connectionRetryTimeout: 120000,
     connectionRetryCount: 2,
     framework: 'mocha',
     reporters: ['spec'],

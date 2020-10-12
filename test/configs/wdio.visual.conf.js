@@ -9,8 +9,6 @@ const visualOptions = {
     scrollAndStitchScreenshots: true
 };
 
-config.region = process.env.REGION || 'us';
-
 config.specs = [
     './test/specs/**/*visual.spec.js'
 ],
