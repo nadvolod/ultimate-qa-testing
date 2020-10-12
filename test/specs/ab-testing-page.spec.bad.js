@@ -1,6 +1,5 @@
 const {Helpers} = require('../helpers');
 
-
 describe('AB testing landing page', () => {
     it('has 2 AB testing variations', () => {
         let timesButtonOneFound = 0;
