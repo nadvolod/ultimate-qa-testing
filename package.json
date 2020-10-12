@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-lander": "wdio test/configs/wdio.saucelabs.conf.js",
     "test-course-urls": "jest",
-    "test:visual": "wdio test/configs/wdio.visual.conf.js"
+    "test:visual": "wdio test/configs/wdio.visual.conf.js",
+    "test:performance": "wdio test/configs/wdio.saucelabs.perf.conf.js"
   },
   "repository": {
     "type": "git",
