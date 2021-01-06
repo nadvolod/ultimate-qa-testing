@@ -28,7 +28,7 @@
     "@wdio/sauce-service": "^6.5.0",
     "@wdio/spec-reporter": "^6.4.7",
     "@wdio/sync": "^6.5.0",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "chromedriver": "^84.0.1",
     "jest": "^26.4.2",
     "screener-runner": "^0.11.5",
