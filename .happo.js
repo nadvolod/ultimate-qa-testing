@@ -46,6 +46,18 @@ module.exports = {
       viewport: "650x415",
       freezeAnimations: "last-frame",
     }),
+    "bug-1507": new RemoteBrowserTarget("chrome", {
+      viewport: "1507x300",
+      freezeAnimations: "last-frame",
+    }),
+    "bug-1230": new RemoteBrowserTarget("chrome", {
+      viewport: "1230x300",
+      freezeAnimations: "last-frame",
+    }),
+    "bug-1000": new RemoteBrowserTarget("chrome", {
+      viewport: "1000x300",
+      freezeAnimations: "last-frame",
+    }),
     // only works on public urls
     // pages: [{ url: 'http://localhost:3000/', title: 'Home Page' }],
   },
