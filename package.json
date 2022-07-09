@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-lander": "wdio test/configs/wdio.saucelabs.conf.js",
     "test-course-urls": "jest",
-    "test:visual": "yarn happo-e2e -- -- yarn cypress run --spec 'cypress/e2e/visual.cy.js'",
+    "test:visual": "npx happo-e2e -- npx cypress run --spec 'cypress/e2e/visual.cy.js'",
     "test:perf": "cypress run --spec '**/lighthouse.cy.js' --browser chrome --headed"
   },
   "repository": {
